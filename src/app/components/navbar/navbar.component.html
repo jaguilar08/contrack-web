@@ -9,7 +9,7 @@
   <div class="flex text-l">
 
     <button [matMenuTriggerFor]="dashboards" class="text-l">Dashboard</button>
-    <mat-menu #dashboards="matMenu" class="bg-amber-400">
+    <mat-menu #dashboards="matMenu">
       <button mat-menu-item [matMenuTriggerFor]="revenue">Revenue</button>
       <button mat-menu-item [matMenuTriggerFor]="liability">Liability</button>
     </mat-menu>
