@@ -5,16 +5,27 @@
     </div>
     <div class="mr-12 text-md">
       <span>Only Active Contracts </span>
-      <mat-slide-toggle class="ml-3" [checked]="activeContracts"></mat-slide-toggle>
-      <select class="ml-3 p-1 rounded-full text-purple-800 bg-white font-medium">
-        <option class="text-purple-800 font-medium" *ngFor="let month of months" [value]="selectedMonth">
+      <mat-slide-toggle
+        class="ml-3"
+        [checked]="activeContracts"
+      ></mat-slide-toggle>
+      <select
+        class="ml-3 p-1 rounded-full text-purple-800 bg-white font-medium"
+      >
+        <option
+          class="text-purple-800 font-medium"
+          *ngFor="let month of months"
+          [value]="selectedMonth"
+        >
           {{ month }}
         </option>
       </select>
     </div>
   </div>
   <div class="grid grid-cols-6 grid-rows-1 gap-3 w-full h-1/6 text-xl">
-    <div class="flex flex-col text-center justify-center bg-white rounded-lg ml-12">
+    <div
+      class="flex flex-col text-center justify-center bg-white rounded-lg ml-12"
+    >
       <h6 class="mt-2">contracs [Qty]</h6>
       <div class="flex flex-1 justify-center items-center">
         <h1 class="lg:text-4xl text-xl mb-8">23</h1>
@@ -44,7 +55,9 @@
         <h1 class="lg:text-4xl text-xl mb-8">$2,123.00</h1>
       </div>
     </div>
-    <div class="flex flex-col text-center justify-center bg-white rounded-lg mr-12">
+    <div
+      class="flex flex-col text-center justify-center bg-white rounded-lg mr-12"
+    >
       <h6 class="mt-2">Bounce rate [%]</h6>
       <div class="flex flex-1 justify-center items-center">
         <h1 class="lg:text-4xl text-xl mb-8">2%</h1>
@@ -53,34 +66,72 @@
   </div>
   <div class="grid grid-cols-4 grid-rows-1 gap-3 w-full h-2/6 my-3">
     <div class="ml-12 bg-white rounded-lg">
-      <horizontal-charts [colorScheme]="orangeScheme" [single]="singleQty" [title]="titleQty"></horizontal-charts>
+      <horizontal-charts
+        [colorScheme]="orangeScheme"
+        [single]="singleQty"
+        [title]="titleQty"
+      ></horizontal-charts>
     </div>
     <div class="bg-white rounded-lg">
-      <horizontal-charts [colorScheme]="orangeScheme" [single]="singleMoney" [title]="titleMoney"></horizontal-charts>
+      <horizontal-charts
+        [colorScheme]="orangeScheme"
+        [single]="singleMoney"
+        [title]="titleMoney"
+      ></horizontal-charts>
     </div>
     <div class="bg-white rounded-lg">
-      <horizontal-charts [colorScheme]="purpleScheme" [single]="singleResponsibleQty" [title]="titleResponsibleQty">
+      <horizontal-charts
+        [colorScheme]="purpleScheme"
+        [single]="singleResponsibleQty"
+        [title]="titleResponsibleQty"
+      >
       </horizontal-charts>
     </div>
     <div class="mr-12 bg-white rounded-lg">
-      <horizontal-charts [colorScheme]="purpleScheme" [single]="singleMoney" [title]="titleResponsibleMoney">
+      <horizontal-charts
+        [colorScheme]="purpleScheme"
+        [single]="singleMoney"
+        [title]="titleResponsibleMoney"
+      >
       </horizontal-charts>
     </div>
   </div>
-  <div class="grid xl:grid-cols-5 grid-rows-2 gap-3 w-full h-2/6 mb-10 grid-cols-4">
+  <div
+    class="grid xl:grid-cols-5 grid-rows-2 gap-3 w-full h-2/6 mb-10 grid-cols-4"
+  >
     <div class="ml-12 bg-white rounded-lg row-span-2 xl:row-span-1">
-      <vertical-charts [colorScheme]="greenScheme" [single]="singleQty" [title]="titleQty"></vertical-charts>
+      <vertical-charts
+        [colorScheme]="greenScheme"
+        [single]="singleQty"
+        [title]="titleQty"
+      ></vertical-charts>
     </div>
     <div class="bg-white rounded-lg row-span-2 xl:col-span-2 col-span-1">
-      <pie-charts [colorScheme]="orangeScheme" [single]="singlePieQty" [title]="pieChart1Title"
-        [designedTotal]="designedTotal"></pie-charts>
+      <pie-charts
+        [colorScheme]="orangeScheme"
+        [single]="singlePieQty"
+        [title]="pieChart1Title"
+        [designedTotal]="designedTotal"
+      ></pie-charts>
     </div>
-    <div class="bg-white rounded-lg row-span-2 xl:col-span-2 xl:mr-12 col-span-1 mr-0">
-      <pie-charts [colorScheme]="purpleScheme" [single]="singlePieMoney" [title]="pieChart2Title"
-        [designedTotal]="designedTotal"></pie-charts>
+    <div
+      class="bg-white rounded-lg row-span-2 xl:col-span-2 xl:mr-12 col-span-1 mr-0"
+    >
+      <pie-charts
+        [colorScheme]="purpleScheme"
+        [single]="singlePieMoney"
+        [title]="pieChart2Title"
+        [designedTotal]="designedTotal"
+      ></pie-charts>
     </div>
-    <div class="xl:ml-12 bg-white rounded-lg ml-0 xl:row-span-1 row-span-2 mr-12 xl:mr-0">
-      <vertical-charts [colorScheme]="greenScheme" [single]="singleQty" [title]="titleQty"></vertical-charts>
+    <div
+      class="xl:ml-12 bg-white rounded-lg ml-0 xl:row-span-1 row-span-2 mr-12 xl:mr-0"
+    >
+      <vertical-charts
+        [colorScheme]="greenScheme"
+        [single]="singleQty"
+        [title]="titleQty"
+      ></vertical-charts>
     </div>
   </div>
 </main>
