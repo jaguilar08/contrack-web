@@ -1,29 +1,39 @@
-<div
-  class="flex justify-between align-center p-3 border shadow-sm shadow-stone-100 px-5"
->
+<div class="flex justify-between bg-white align-center bg-whiten py-2 border shadow-sm shadow-stone-100 px-5">
   <div class="flex align-items-center">
     <!-- Logo -->
-    <a routerLink="/home" class="flex text-xl align-center mr-10">
-      <mat-icon class="mr-1">history_edu</mat-icon>
-      Con<span class="text-indigo-500">Track</span>
-    </a>
-    <a routerLink="/call_logs" class="flex text-base mr-4">
-      <span class="text-gray-500">Call Logs</span>
-    </a>
-    <a routerLink="/signals" class="flex text-base">
-      <span class="text-gray-500">Signals</span>
+    <a routerLink="/home" class="flex text-3xl items-center mr-10">
+      <mat-icon inline="true" class="mr-1">history_edu</mat-icon>
+      <span class="text-xl"> Con </span><span class="text-indigo-500 text-xl">Track</span>
     </a>
   </div>
+  <div class="flex text-l">
+
+    <button [matMenuTriggerFor]="dashboards" class="text-l">Dashboard</button>
+    <mat-menu #dashboards="matMenu" class="bg-amber-400">
+      <button mat-menu-item [matMenuTriggerFor]="revenue">Revenue</button>
+      <button mat-menu-item [matMenuTriggerFor]="liability">Liability</button>
+    </mat-menu>
+
+    <mat-menu #revenue="matMenu">
+      <a mat-menu-item href="">Monthly View</a>
+      <a mat-menu-item href="">Annual View</a>
+    </mat-menu>
+    <mat-menu #liability="matMenu">
+      <a mat-menu-item href="">Monthly View</a>
+      <a mat-menu-item href="">Annual View</a>
+    </mat-menu>
+
+    <a routerLink="/signals" class="flex self-center mx-5">Contracts </a>
+    <a routerLink="/signals" class="flex self-center mx-5">Alerts </a>
+    <a routerLink="/signals" class="flex self-center mx-5">Settings </a>
+  </div>
+
   <div class="flex align-center">
     <h3 class="font-medium text-slate-700 my-0 mx-2">
       <!-- {{ sessionService.user.name }} -->
     </h3>
-    <img
-      src="https://avatars.dicebear.com/api/adventurer-neutral/
+    <img src="https://avatars.dicebear.com/api/adventurer-neutral/
         jeff
-      .svg"
-      alt="Profile Picture"
-      class="h-8 w-8 rounded-full"
-    />
+      .svg" alt="Profile Picture" class="h-8 w-8 rounded-full" />
   </div>
 </div>
