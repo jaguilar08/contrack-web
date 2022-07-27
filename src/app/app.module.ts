@@ -12,6 +12,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MaterialModule } from './material/material.module';
 import { VerticalChartsComponent } from './components/charts/vertical-charts/vertical-charts.component';
 import { PieChartsComponent } from './components/charts/pie-charts/pie-charts.component';
+import { SettingsComponent } from './screens/settings/settings.component';
+import { TermsSetupCardComponent } from './components/settingsCards/terms-setup-card/terms-setup-card.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { PieChartsComponent } from './components/charts/pie-charts/pie-charts.co
     DashboardComponent,
     NavbarComponent,
     VerticalChartsComponent,
-    PieChartsComponent
+    PieChartsComponent,
+    SettingsComponent,
+    TermsSetupCardComponent
   ],
   imports: [
     AppRoutingModule,
