@@ -1,0 +1,20 @@
+<section class="w-96 bg-white flex flex-col items-center rounded-3xl p-10">
+  <div class="w-fit">
+    <h2 class="text-4xl font-bold mb-5">Responsibles</h2>
+  </div>
+  <div class="bg-white w-full px-2">
+    <div
+      class="flex justify-between border px-2 pt-1 content-center"
+      *ngFor="let responsible of responsibles"
+    >
+      <div class="align-middle">{{ responsible }}</div>
+      <div class="h-fit">
+        <a> <mat-icon class="text-amber-500">edit</mat-icon> </a
+        ><a>
+          <mat-icon class="text-red-500 ml-1">delete</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div></div>
+</section>
