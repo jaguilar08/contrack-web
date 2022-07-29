@@ -1,24 +1,32 @@
-<section class="w-96 bg-white flex flex-col items-center rounded-3xl p-10">
-  <div class="w-fit">
-    <h2 class="text-4xl font-bold mb-5">Responsibles</h2>
+<section class="card w-96 bg-white flex flex-col items-center rounded-3xl p-10">
+  <div class="w-fit ">
+    <h2 class="text-4xl font-semibold mb-5">Contract Fields</h2>
   </div>
-  <div class="bg-white w-full px-2">
+  <div class="bg-white w-full px-2 grow overflow-auto">
     <div
       class="flex justify-between border px-2 pt-1 content-center"
       *ngFor="let term of terms"
     >
       <div class="align-middle">{{ term.name }}</div>
       <div class="h-fit">
-        <a> <mat-icon class="text-amber-500">edit</mat-icon> </a
-        ><a>
-          <mat-icon class="text-red-500 ml-1">delete</mat-icon>
-        </a>
+        <mat-checkbox></mat-checkbox>
       </div>
+    </div>
+    <div
+      style="height: 30px"
+      class="flex justify-end border pr-1 pt-0.5 content-center"
+    >
+      <button (click)="onEdit()">
+        <mat-icon class="icon text-white bg-indigo-500 rounded-lg"
+          >add</mat-icon
+        >
+      </button>
     </div>
   </div>
 
   <div class="py-10 w-1/2">
     <button
+      (click)="onAdd()"
       class="py-1 w-full border-2 text-base bg-indigo-500 rounded-md text-white hover:bg-indigo-600 hover:border-indigo-600"
     >
       Add

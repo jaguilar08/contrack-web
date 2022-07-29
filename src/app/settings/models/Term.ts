@@ -1,11 +1,4 @@
-export class Term {
+export interface Term {
     name: string;
     status: boolean;
-
-
-
-    constructor() {
-        this.name = '';
-        this.status = false;
-    }
 }
