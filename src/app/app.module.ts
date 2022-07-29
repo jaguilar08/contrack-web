@@ -1,5 +1,7 @@
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CookieModule } from 'ngx-cookie';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +17,9 @@ import { PieChartsComponent } from './dashboard/components/charts/pie-charts/pie
 import { SettingsComponent } from './settings/screens/settings/settings.component';
 import { TermsSetupCardComponent } from './settings/components/settingsCards/terms-setup-card/terms-setup-card.component';
 import { TermsSelectionCardComponent } from './settings/components/settingsCards/terms-selection-card/terms-selection-card.component';
+import { AuthGuard } from '@guards/base/auth.guard';
+import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
+import { PermissionGuard } from '@guards/base/permission.guard';
 
 
 @NgModule({
@@ -35,10 +40,20 @@ import { TermsSelectionCardComponent } from './settings/components/settingsCards
     BrowserModule,
     FormsModule,
     MaterialModule,
-    NgxChartsModule
+    NgxChartsModule,
+    CookieModule.withOptions(),
+    HttpClientModule,
 
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+    PermissionGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
