@@ -14,6 +14,7 @@ import { VerticalChartsComponent } from './components/charts/vertical-charts/ver
 import { PieChartsComponent } from './components/charts/pie-charts/pie-charts.component';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { TermsSetupCardComponent } from './components/settingsCards/terms-setup-card/terms-setup-card.component';
+import { TermsSelectionCardComponent } from './components/settingsCards/terms-selection-card/terms-selection-card.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TermsSetupCardComponent } from './components/settingsCards/terms-setup-
     VerticalChartsComponent,
     PieChartsComponent,
     SettingsComponent,
-    TermsSetupCardComponent
+    TermsSetupCardComponent,
+    TermsSelectionCardComponent
   ],
   imports: [
     AppRoutingModule,

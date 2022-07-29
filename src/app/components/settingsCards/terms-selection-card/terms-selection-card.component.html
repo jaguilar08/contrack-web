@@ -5,9 +5,9 @@
   <div class="bg-white w-full px-2">
     <div
       class="flex justify-between border px-2 pt-1 content-center"
-      *ngFor="let responsible of responsibles"
+      *ngFor="let term of terms"
     >
-      <div class="align-middle">{{ responsible }}</div>
+      <div class="align-middle">{{ term.name }}</div>
       <div class="h-fit">
         <a> <mat-icon class="text-amber-500">edit</mat-icon> </a
         ><a>
