@@ -15,4 +15,5 @@ export class TermsSetupCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
