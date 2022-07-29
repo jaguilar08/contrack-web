@@ -1,15 +1,17 @@
-<div class="flex justify-between bg-white align-center bg-whiten py-2 border shadow-sm shadow-stone-100 px-5">
+<div
+  class="flex justify-between bg-white align-center bg-whiten py-2 border shadow-sm shadow-stone-100 px-5"
+>
   <div class="flex align-items-center">
     <!-- Logo -->
     <a routerLink="/home" class="flex text-3xl items-center mr-10">
       <mat-icon inline="true" class="mr-1">history_edu</mat-icon>
-      <span class="text-xl"> Con </span><span class="text-indigo-500 text-xl">Track</span>
+      <span class="text-xl"> Con </span
+      ><span class="text-indigo-500 text-xl">Track</span>
     </a>
   </div>
   <div class="flex text-l">
-
     <button [matMenuTriggerFor]="dashboards" class="text-l">Dashboard</button>
-    <mat-menu #dashboards="matMenu" class="bg-amber-400">
+    <mat-menu #dashboards="matMenu">
       <button mat-menu-item [matMenuTriggerFor]="revenue">Revenue</button>
       <button mat-menu-item [matMenuTriggerFor]="liability">Liability</button>
     </mat-menu>
@@ -25,15 +27,19 @@
 
     <a routerLink="/signals" class="flex self-center mx-5">Contracts </a>
     <a routerLink="/signals" class="flex self-center mx-5">Alerts </a>
-    <a routerLink="/signals" class="flex self-center mx-5">Settings </a>
+    <a routerLink="/settings" class="flex self-center mx-5">Settings </a>
   </div>
 
   <div class="flex align-center">
     <h3 class="font-medium text-slate-700 my-0 mx-2">
       <!-- {{ sessionService.user.name }} -->
     </h3>
-    <img src="https://avatars.dicebear.com/api/adventurer-neutral/
+    <img
+      src="https://avatars.dicebear.com/api/adventurer-neutral/
         jeff
-      .svg" alt="Profile Picture" class="h-8 w-8 rounded-full" />
+      .svg"
+      alt="Profile Picture"
+      class="h-8 w-8 rounded-full"
+    />
   </div>
 </div>
