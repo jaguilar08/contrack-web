@@ -2,7 +2,17 @@
   <div class="w-fit ">
     <h2 class="text-4xl font-semibold mb-5">Contract Fields</h2>
   </div>
-  <div class="bg-white w-full px-2 grow overflow-auto">
+  <div class="bg-white w-full px-2 overflow-auto">
+    <div
+      style="height: 30px"
+      class="w-full flex justify-end border pr-1 pt-0.5 content-center"
+    >
+      <button (click)="onEdit()">
+        <mat-icon class="icon text-white bg-indigo-500 rounded-lg"
+          >add</mat-icon
+        >
+      </button>
+    </div>
     <div
       class="flex justify-between border px-2 pt-1 content-center"
       *ngFor="let term of terms"
@@ -11,16 +21,6 @@
       <div class="h-fit">
         <mat-checkbox></mat-checkbox>
       </div>
-    </div>
-    <div
-      style="height: 30px"
-      class="flex justify-end border pr-1 pt-0.5 content-center"
-    >
-      <button (click)="onEdit()">
-        <mat-icon class="icon text-white bg-indigo-500 rounded-lg"
-          >add</mat-icon
-        >
-      </button>
     </div>
   </div>
 
