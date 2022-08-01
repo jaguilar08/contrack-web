@@ -7,7 +7,7 @@ export const environment = {
   dgSuite: 'http://dgsuite.dev.com/#/login/',
   apiUrl: 'http://192.168.1.118:8000/',
   error403: 'http://dgsuite.dev.com/#/error/403',
-  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzI4LCJhbHRfY29kZSI6IiIsInVzZXJfbGV2ZWwiOjIsIm5hbWUiOiJIZWJlcnQgTmVncm9uIiwiZW1haWwiOiJobmVncm9uQGRlYWxlcmdlZWsuY29tIiwidXNlcl9hcHBsaWNhdGlvbl9pZCI6MzYzOCwic2VjdXJpdHlfYWN0aW9ucyI6W10sImNyZWF0ZWQiOiIyMDIyLTA3LTMwIDEyOjM2OjQwIn0.s20PTKlZzLL_0Zb8GLfh70L9r0198f07o6s-SD04dhY'
+  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzI3LCJhbHRfY29kZSI6IiIsInVzZXJfbGV2ZWwiOjIsIm5hbWUiOiJEYW5pZWwgUGxpZWdvIiwiZW1haWwiOiJkcGxpZWdvQGRlYWxlcmdlZWsuY29tIiwidXNlcl9hcHBsaWNhdGlvbl9pZCI6MzYzNSwic2VjdXJpdHlfYWN0aW9ucyI6W10sImNyZWF0ZWQiOiIyMDIyLTA4LTAxIDEzOjQ1OjIzIn0.cObzuCZufjHpalj18qnPdAr4G7IsUtLEe2UH9WDcu2c'
 };
 
 /*

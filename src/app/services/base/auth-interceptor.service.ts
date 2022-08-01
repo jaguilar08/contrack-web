@@ -38,7 +38,7 @@ export class AuthInterceptorService implements HttpInterceptor {
     if (currentDealer.code) {
       Object.assign(customHeaders, {
         'current-group': currentDealer.dealerGroupCode || '',
-        'current-dealer': currentDealer.code,
+        'current-dealer': currentDealer.code
       });
     }
 

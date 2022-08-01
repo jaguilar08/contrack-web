@@ -9,3 +9,7 @@
 .mat-slide-toggle.mat-checked .mat-slide-toggle-ripple .mat-ripple-element {
   background-color: rgb(99 102 241);
 }
+
+select {
+  border-right: 8px solid transparent
+}

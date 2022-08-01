@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HorizontalChartsComponent } from './dashboard/components/charts/horizontal-charts/horizontal-charts.component';
-import { DashboardComponent } from './dashboard/screens/dashboard/dashboard.component';
+import { DashboardMonthlyComponent } from './dashboard/screens/dashboard-monthly/dashboard-monthly.component';
+import { DashboardAnnualComponent } from './dashboard/screens/dashboard-annual/dashboard-annual.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
@@ -27,9 +28,9 @@ import { AddFieldDialogComponent } from './settings/components/add-field-dialog/
   declarations: [
     AppComponent,
     HorizontalChartsComponent,
-    DashboardComponent,
+    DashboardMonthlyComponent,
+    DashboardAnnualComponent,
     NavbarComponent,
-
     VerticalChartsComponent,
     PieChartsComponent,
     SettingsComponent,
@@ -47,7 +48,6 @@ import { AddFieldDialogComponent } from './settings/components/add-field-dialog/
     NgxChartsModule,
     CookieModule.withOptions(),
     HttpClientModule,
-
   ],
   providers: [
     AuthGuard,

@@ -1,10 +1,11 @@
-<h1 class="text-sm mb-2 text-center font-medium">{{ title }}</h1>
-<div class="w-3/4 h-3/4">
+<h1 class="text-sm my-2 text-center font-medium">{{ title }}</h1>
+<div class="self-center w-3/4 h-full">
   <ngx-charts-bar-vertical
     [scheme]="colorScheme"
     [results]="single"
     [showDataLabel]="true"
     [xAxis]="showXAxis"
+    [showGridLines]="false"
   >
   </ngx-charts-bar-vertical>
 </div>
