@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HorizontalChartsComponent } from './dashboard/components/charts/horizontal-charts/horizontal-charts.component';
 import { DashboardComponent } from './dashboard/screens/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MaterialModule } from './material/material.module';
@@ -20,6 +20,7 @@ import { TermsSelectionCardComponent } from './settings/components/settingsCards
 import { AuthGuard } from '@guards/base/auth.guard';
 import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
 import { PermissionGuard } from '@guards/base/permission.guard';
+import { AddFieldDialogComponent } from './settings/components/add-field-dialog/add-field-dialog.component';
 
 
 @NgModule({
@@ -28,17 +29,20 @@ import { PermissionGuard } from '@guards/base/permission.guard';
     HorizontalChartsComponent,
     DashboardComponent,
     NavbarComponent,
+
     VerticalChartsComponent,
     PieChartsComponent,
     SettingsComponent,
     TermsSetupCardComponent,
-    TermsSelectionCardComponent
+    TermsSelectionCardComponent,
+    AddFieldDialogComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     NgxChartsModule,
     CookieModule.withOptions(),

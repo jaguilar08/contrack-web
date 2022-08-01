@@ -5,31 +5,31 @@
   <div class="bg-white w-full px-2 overflow-auto">
     <div
       style="height: 30px"
-      class="w-full flex justify-end border pr-1 pt-0.5 content-center"
+      class="z-10 w-full flex bg-white top-0 sticky justify-end border p-1 pt-0.5 content-center"
     >
-      <button (click)="onEdit()">
+      <button class="bg-white mr-1" (click)="onAdd()">
         <mat-icon class="icon text-white bg-indigo-500 rounded-lg"
           >add</mat-icon
         >
       </button>
     </div>
     <div
-      class="flex justify-between border px-2 pt-1 content-center"
+      class="flex justify-between border px-3 pt-1 content-center"
       *ngFor="let term of terms"
     >
       <div class="align-middle">{{ term.name }}</div>
       <div class="h-fit">
-        <mat-checkbox></mat-checkbox>
+        <mat-checkbox [(ngModel)]="term.status" class="z-0"></mat-checkbox>
       </div>
     </div>
   </div>
 
   <div class="py-10 w-1/2">
     <button
-      (click)="onAdd()"
+      (click)="onSave()"
       class="py-1 w-full border-2 text-base bg-indigo-500 rounded-md text-white hover:bg-indigo-600 hover:border-indigo-600"
     >
-      Add
+      Save
     </button>
   </div>
 </section>

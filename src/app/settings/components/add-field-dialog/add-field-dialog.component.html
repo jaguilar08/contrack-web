@@ -1,0 +1,60 @@
+<section class="w-96 bg-white flex flex-col items-center rounded-3xl p-10">
+  <div class="w-fit">
+    <h2 class="text-4xl font-semibold mb-5">Add Field</h2>
+  </div>
+  <form [formGroup]="form">
+    <div>
+      <label>Field Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="name"
+        class="rounded-lg border w-full px-3 py-2"
+      />
+    </div>
+    <div class="columns-2">
+      <div class="flex">
+        <section class="flex flex-col pb-2">
+          <div class="mt-5">
+            <label for="fieldType" class="pl-2">Field Type </label>
+            <div class="flex items-center group">
+              <select
+                formControlName="type"
+                class="rounded-lg border px-3 py-2 bg-white"
+              >
+                <option value="number">number</option>
+                <option value="checkbox">checkbox</option>
+                <option value="date">date</option>
+                <option value="text">text</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="flex">
+        <section class="flex flex-col pb-2">
+          <div class="mt-5">
+            <label for="fieldType" class="pl-2">Field Status </label>
+            <div class="flex items-center group">
+              <select
+                formControlName="status"
+                class="rounded-lg border px-3 py-2 bg-white"
+              >
+                <option value="required">required</option>
+                <option value="additional">additional</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </form>
+  <div class="py-10 w-1/2">
+    <button
+      (click)="addField()"
+      class="py-1 w-full border-2 text-base bg-indigo-500 rounded-md text-white hover:bg-indigo-600 hover:border-indigo-600"
+    >
+      Add
+    </button>
+  </div>
+</section>
