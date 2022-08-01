@@ -4,9 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatMenuModule } from '@angular/material/menu';
+
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatCheckboxModule,
     MatDialogModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
     MatSlideToggleModule,
     MatMenuModule

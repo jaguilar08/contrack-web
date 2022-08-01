@@ -1,8 +1,8 @@
 <section class="card w-96 bg-white flex flex-col items-center rounded-3xl p-10">
-  <div class="w-fit ">
+  <div class="w-fit">
     <h2 class="text-4xl font-semibold mb-5">Contract Fields</h2>
   </div>
-  <div class="bg-white w-full px-2 overflow-auto">
+  <div class="bg-white w-full grow px-2 overflow-auto">
     <div
       style="height: 30px"
       class="z-10 w-full flex bg-white top-0 sticky justify-end border p-1 pt-0.5 content-center"
@@ -13,23 +13,23 @@
         >
       </button>
     </div>
-    <div
-      class="flex justify-between border px-3 pt-1 content-center"
-      *ngFor="let term of terms"
-    >
-      <div class="align-middle">{{ term.field_label }}</div>
-      <div class="h-fit">
-        <mat-checkbox [(ngModel)]="term.status" class="z-0"></mat-checkbox>
+    <div *ngIf="!isLoading; else loading">
+      <div
+        class="flex justify-between border px-3 pt-1 content-center"
+        *ngFor="let term of terms"
+      >
+        <div class="align-middle">{{ term.field_label }}</div>
+        <div class="h-fit">
+          <mat-checkbox [(ngModel)]="term.status" class="z-0"></mat-checkbox>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="py-10 w-1/2">
-    <button
-      (click)="onSave()"
-      class="py-1 w-full border-2 text-base bg-indigo-500 rounded-md text-white hover:bg-indigo-600 hover:border-indigo-600"
-    >
-      Save
-    </button>
-  </div>
 </section>
+
+<!--Loading template-->
+<ng-template #loading>
+  <div class="flex justify-center">
+    <mat-spinner [diameter]="40" color="primary" class="mt-3"></mat-spinner>
+  </div>
+</ng-template>

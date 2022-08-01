@@ -11,7 +11,7 @@ import { AddFieldDialogComponent } from '../../add-field-dialog/add-field-dialog
   encapsulation: ViewEncapsulation.None
 })
 export class TermsSelectionCardComponent implements OnInit {
-
+  isLoading: boolean = false;
   terms: Term[] = [];
 
   constructor(
@@ -24,13 +24,15 @@ export class TermsSelectionCardComponent implements OnInit {
   }
 
   onLoad() {
+    this.isLoading = true;
     this.settingsService
       .getContractFields()
       .subscribe({
         next: (fields: Term[]) => {
-          console.log(fields);
-          
           this.terms = fields
+        },
+        complete: () => {
+          this.isLoading = false;
         }
       })
   }
