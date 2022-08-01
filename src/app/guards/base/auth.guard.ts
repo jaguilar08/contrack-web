@@ -19,7 +19,6 @@ export class AuthGuard implements CanActivate {
 
         this.sessionService.setUserCredentials(res);
 
-        console.log('cola');
         return true;
       }),
       catchError((e) => {

@@ -20,8 +20,13 @@ import { TermsSelectionCardComponent } from './settings/components/settingsCards
 import { AuthGuard } from '@guards/base/auth.guard';
 import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
 import { PermissionGuard } from '@guards/base/permission.guard';
+
 import { AddFieldDialogComponent } from './settings/components/add-field-dialog/add-field-dialog.component';
 import { SharedModule } from './shared/shared.module';
+
+import { ContractsTableComponent } from './contracts/components/contracts-table/contracts-table.component';
+import { ContractsComponent } from './contracts/screens/contracts/contracts.component';
+
 
 
 @NgModule({
@@ -35,7 +40,10 @@ import { SharedModule } from './shared/shared.module';
     SettingsComponent,
     TermsSetupCardComponent,
     TermsSelectionCardComponent,
-    AddFieldDialogComponent
+    AddFieldDialogComponent,
+    ContractsTableComponent,
+    ContractsComponent
+
   ],
   imports: [
     AppRoutingModule,

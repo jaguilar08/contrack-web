@@ -127,7 +127,6 @@ export class SessionService {
   }
 
   constructor(private cookieService: CookieService) {
-    console.log("desfilaba en milan");
 
     !environment.production && environment.token &&
       this.cookieService.put('dgtoken', environment.token);

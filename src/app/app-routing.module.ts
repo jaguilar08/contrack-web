@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@guards/base/auth.guard';
+import { ContractsComponent } from './contracts/screens/contracts/contracts.component';
+
+
 
 const routes: Routes = [
   {
@@ -15,7 +18,8 @@ const routes: Routes = [
         path: 'settings',
         loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
       },
-      { path: '**', redirectTo: 'home' }
+      { path: '**', redirectTo: 'home' },
+      { path: 'contracts', component: ContractsComponent }
     ]
   }
 ];
