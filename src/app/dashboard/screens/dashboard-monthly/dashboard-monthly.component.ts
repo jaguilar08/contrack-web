@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Color, ScaleType } from '@swimlane/ngx-charts';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'dashboard-monthly',
+  templateUrl: './dashboard-monthly.component.html',
+  styleUrls: ['./dashboard-monthly.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class DashboardComponent implements OnInit {
+export class DashboardMonthlyComponent implements OnInit {
   pieChart1Title: string = "Active Contracts [Qty]";
   designedTotal: number = 234567;
   pieChart2Title: string = "Active Contracts [Money]";

@@ -1,11 +1,10 @@
-export class Term {
-    name: string;
+export interface Term {
+    field_label: string;
     status: boolean;
+}
 
-
-
-    constructor() {
-        this.name = '';
-        this.status = false;
-    }
+export interface Field {
+    name: string;
+    type: string;
+    status: string;
 }

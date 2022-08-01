@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@guards/base/auth.guard';
-import { DashboardComponent } from './dashboard/screens/dashboard/dashboard.component';
 import { SettingsComponent } from './settings/screens/settings/settings.component';
 
 const routes: Routes = [
@@ -9,15 +8,12 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     children: [
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
       {
         path: 'home',
-        component: DashboardComponent
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       { path: 'settings', component: SettingsComponent },
-
-
-
+      { path: '**', redirectTo: 'home' }
     ]
   }
 ];

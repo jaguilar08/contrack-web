@@ -6,12 +6,12 @@
     <div class="mr-12 text-md">
       <span>Only Active Contracts </span>
       <mat-slide-toggle
-        class="ml-3"
+        class="toggle-display ml-3"
         [checked]="activeContracts"
         color="primary"
       ></mat-slide-toggle>
       <select
-        class="ml-3 p-1 rounded-full text-purple-800 bg-white font-medium"
+        class="w-20 ml-3 p-1 rounded-full text-purple-800 bg-white font-medium"
       >
         <option
           class="text-purple-800 font-medium"
@@ -29,31 +29,31 @@
     >
       <h6 class="mt-2">contracs [Qty]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">23</h1>
+        <h1 class="text-2xl xl:text-4xl mb-8">23</h1>
       </div>
     </div>
     <div class="flex flex-col text-center justify-center bg-white rounded-lg">
       <h6 class="mt-2">contracs [Money]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">$232,123.00</h1>
+        <h1 class="xl:text-4xl text-2xl mb-8">$232,123.00</h1>
       </div>
     </div>
     <div class="flex flex-col text-center justify-center bg-white rounded-lg">
       <h6 class="mt-2">renewed contracts [Qty]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">23</h1>
+        <h1 class="xl:text-4xl text-2xl mb-8">23</h1>
       </div>
     </div>
     <div class="flex flex-col text-center justify-center bg-white rounded-lg">
       <h6 class="mt-2">renewed contracts [Money]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">$232,123.00</h1>
+        <h1 class="xl:text-4xl text-2xl mb-8">$232,123.00</h1>
       </div>
     </div>
     <div class="flex flex-col text-center justify-center bg-white rounded-lg">
       <h6 class="mt-2">Average Ticket [Money]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">$2,123.00</h1>
+        <h1 class="xl:text-4xl text-2xl mb-8">$2,123.00</h1>
       </div>
     </div>
     <div
@@ -61,7 +61,7 @@
     >
       <h6 class="mt-2">Bounce rate [%]</h6>
       <div class="flex flex-1 justify-center items-center">
-        <h1 class="lg:text-4xl text-xl mb-8">2%</h1>
+        <h1 class="xl:text-4xl text-2xl mb-8">2%</h1>
       </div>
     </div>
   </div>
@@ -102,6 +102,7 @@
   >
     <div class="ml-12 bg-white rounded-lg row-span-2 xl:row-span-1">
       <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
         [colorScheme]="greenScheme"
         [single]="singleQty"
         [title]="titleQty"
@@ -129,6 +130,7 @@
       class="xl:ml-12 bg-white rounded-lg ml-0 xl:row-span-1 row-span-2 mr-12 xl:mr-0"
     >
       <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
         [colorScheme]="greenScheme"
         [single]="singleQty"
         [title]="titleQty"

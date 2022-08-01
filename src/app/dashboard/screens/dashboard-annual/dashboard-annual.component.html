@@ -1,0 +1,59 @@
+<main class="flex flex-col w-full h-full bg-zinc-200">
+  <div class="flex justify-between w-full my-14">
+    <div class="ml-9 text-2xl font-medium">
+      <span>Revenue Monthly View</span>
+    </div>
+    <div class="mr-12 text-md">
+      <span>Only Active Contracts </span>
+      <mat-slide-toggle
+        class="toggle-display ml-3"
+        [checked]="activeContracts"
+      ></mat-slide-toggle>
+      <select
+        class="w-20 ml-3 p-1 rounded-full text-purple-800 bg-white font-medium"
+      >
+        <option
+          class="text-purple-800 font-medium"
+          *ngFor="let month of months"
+          [value]="selectedMonth"
+        >
+          {{ month }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-rows-2 h-full gap-3 w-full mb-10 lg:grid-cols-2">
+    <div class="mx-12 lg:ml-12 bg-white rounded-lg lg:mx-0">
+      <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
+        [colorScheme]="orangeScheme"
+        [single]="singleQty"
+        [title]="titleQty"
+      ></vertical-charts>
+    </div>
+    <div class="mx-12 bg-white rounded-lg lg:mr-12 lg:mx-0">
+      <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
+        [colorScheme]="purpleScheme"
+        [single]="singleQty"
+        [title]="titleMoney"
+      ></vertical-charts>
+    </div>
+    <div class="mx-12 bg-white rounded-lg lg:ml-12 lg:mx-0">
+      <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
+        [colorScheme]="greenScheme"
+        [single]="singleDuration"
+        [title]="titleDuration"
+      ></vertical-charts>
+    </div>
+    <div class="mx-12 bg-white rounded-lg lg:mr-12 lg:mx-0">
+      <vertical-charts
+        class="flex flex-col h-5/6 mb-4"
+        [colorScheme]="redScheme"
+        [single]="singleValueRange"
+        [title]="titleValueRange"
+      ></vertical-charts>
+    </div>
+  </div>
+</main>
