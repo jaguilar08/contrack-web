@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { DialogConfirmComponent } from './components/confirm/confirm.component';
 import { ErrorMsgDirective } from './directives/error-msg.directive';
 import { MaterialModule } from '../material/material.module';
+import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,8 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,
