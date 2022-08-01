@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 export class HttpService {
   constructor(protected http: HttpClient) {
     if (!environment.production) {
-      console.log('DEBUG MODE ', environment.apiUrl);
     }
   }
 
@@ -63,7 +62,6 @@ export class HttpService {
    * @returns
    */
   onAuthentication(): Observable<Object> {
-    console.log('hola');
 
     return this.get('one_authentication');
   }

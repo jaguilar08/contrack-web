@@ -22,7 +22,6 @@ export class AuthInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     // Get the correct token depending on the outgoing http request
-    console.log('demasidos logs');
 
     const token: string | null = request.url.includes('authentication')
       ? this.sessionService.dgSuiteToken
