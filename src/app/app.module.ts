@@ -20,6 +20,8 @@ import { TermsSelectionCardComponent } from './settings/components/settingsCards
 import { AuthGuard } from '@guards/base/auth.guard';
 import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
 import { PermissionGuard } from '@guards/base/permission.guard';
+import { ContractsTableComponent } from './contracts/components/contracts-table/contracts-table.component';
+import { ContractsComponent } from './contracts/screens/contracts/contracts.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { PermissionGuard } from '@guards/base/permission.guard';
     PieChartsComponent,
     SettingsComponent,
     TermsSetupCardComponent,
-    TermsSelectionCardComponent
+    TermsSelectionCardComponent,
+    ContractsTableComponent,
+    ContractsComponent
   ],
   imports: [
     AppRoutingModule,
