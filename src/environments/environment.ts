@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   dgSuite: 'http://dgsuite.dev.com/#/login/',
-  apiUrl: 'http://192.168.100.24:8000/',
-  //apiUrl: 'http://localhost:5041/',
+  // apiUrl: 'http://192.168.100.24:8000/',
+  apiUrl: 'http://192.168.1.118:8000/',
   error403: 'http://dgsuite.dev.com/#/error/403',
   token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzI3LCJhbHRfY29kZSI6IiIsInVzZXJfbGV2ZWwiOjIsIm5hbWUiOiJEYW5pZWwgUGxpZWdvIiwiZW1haWwiOiJkcGxpZWdvQGRlYWxlcmdlZWsuY29tIiwidXNlcl9hcHBsaWNhdGlvbl9pZCI6MzYzNSwic2VjdXJpdHlfYWN0aW9ucyI6W10sImNyZWF0ZWQiOiIyMDIyLTA3LTI5IDE2OjM3OjQxIn0.LJmW6WqMMhECryeu-BwszRuh99bSm1ijFrR6FDU6sHQ'
 };
