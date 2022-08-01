@@ -17,7 +17,7 @@
       class="flex justify-between border px-3 pt-1 content-center"
       *ngFor="let term of terms"
     >
-      <div class="align-middle">{{ term.name }}</div>
+      <div class="align-middle">{{ term.field_label }}</div>
       <div class="h-fit">
         <mat-checkbox [(ngModel)]="term.status" class="z-0"></mat-checkbox>
       </div>

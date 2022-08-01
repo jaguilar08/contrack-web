@@ -27,7 +27,11 @@ export class TermsSelectionCardComponent implements OnInit {
     this.settingsService
       .getContractFields()
       .subscribe({
-        next: (fields: Term[]) => this.terms = fields
+        next: (fields: Term[]) => {
+          console.log(fields);
+          
+          this.terms = fields
+        }
       })
   }
 
@@ -36,7 +40,7 @@ export class TermsSelectionCardComponent implements OnInit {
   }
 
   onAdd() {
-    const dialogRef = this.dialog.open(AddFieldDialogComponent ,{
+    const dialogRef = this.dialog.open(AddFieldDialogComponent, {
       width: 'auto',
       height: 'auto',
       autoFocus: false

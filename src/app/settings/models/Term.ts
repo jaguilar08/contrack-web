@@ -1,5 +1,5 @@
 export interface Term {
-    name: string;
+    field_label: string;
     status: boolean;
 }
 

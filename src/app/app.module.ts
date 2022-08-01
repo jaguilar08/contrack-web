@@ -10,7 +10,6 @@ import { HorizontalChartsComponent } from './dashboard/components/charts/horizon
 import { DashboardMonthlyComponent } from './dashboard/screens/dashboard-monthly/dashboard-monthly.component';
 import { DashboardAnnualComponent } from './dashboard/screens/dashboard-annual/dashboard-annual.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MaterialModule } from './material/material.module';
 import { VerticalChartsComponent } from './dashboard/components/charts/vertical-charts/vertical-charts.component';
@@ -22,6 +21,7 @@ import { AuthGuard } from '@guards/base/auth.guard';
 import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
 import { PermissionGuard } from '@guards/base/permission.guard';
 import { AddFieldDialogComponent } from './settings/components/add-field-dialog/add-field-dialog.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -30,7 +30,6 @@ import { AddFieldDialogComponent } from './settings/components/add-field-dialog/
     HorizontalChartsComponent,
     DashboardMonthlyComponent,
     DashboardAnnualComponent,
-    NavbarComponent,
     VerticalChartsComponent,
     PieChartsComponent,
     SettingsComponent,
@@ -48,6 +47,7 @@ import { AddFieldDialogComponent } from './settings/components/add-field-dialog/
     NgxChartsModule,
     CookieModule.withOptions(),
     HttpClientModule,
+    SharedModule
   ],
   providers: [
     AuthGuard,
