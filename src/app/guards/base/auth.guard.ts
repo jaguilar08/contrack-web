@@ -10,15 +10,12 @@ import { catchError, map, Observable, of } from 'rxjs';
 })
 export class AuthGuard implements CanActivate {
   constructor(private sessionService: SessionService, private appService: AppService) {
-    console.log('chale');
   }
 
   authenticate(): Observable<any> {
-    console.log('wazaaa');
 
     return this.appService.onAuthentication().pipe(
       map((res: any) => {
-        console.log('rodro is cool');
 
         this.sessionService.setUserCredentials(res);
 
