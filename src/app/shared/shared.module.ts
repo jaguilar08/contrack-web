@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
+import { ToDatePipe } from './pipes/to-date.pipe';
 
 
 
@@ -14,6 +15,7 @@ import { NgModule } from '@angular/core';
     DialogConfirmComponent,
     ErrorMsgDirective,
     NavbarComponent,
+    ToDatePipe,
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { NgModule } from '@angular/core';
   ],
   exports: [
     NavbarComponent,
-    ErrorMsgDirective
+    ErrorMsgDirective,
+    ToDatePipe
   ]
 })
 export class SharedModule { }
