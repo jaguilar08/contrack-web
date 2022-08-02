@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatDialog } from '@angular/material/dialog';
 import { Term } from 'src/app/settings/models/Term';
 import { SettingsService } from 'src/app/settings/services/settings.service';
@@ -47,5 +48,21 @@ export class TermsSelectionCardComponent implements OnInit {
       height: 'auto',
       autoFocus: false
     })
+  }
+
+  setChecked(term: Term, event: MatCheckboxChange) {
+    if (event.checked === true) {
+      this.settingsService
+        .updateContractFields(term.field_code, 'required')
+        .subscribe({
+          next: (res) => { }
+        })
+    } else {
+      this.settingsService
+        .updateContractFields(term.field_code, 'additional')
+        .subscribe({
+          next: (res) => { }
+        })
+    }
   }
 }

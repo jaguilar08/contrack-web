@@ -7,14 +7,14 @@
       <label>Field Name</label>
       <input
         type="text"
-        formControlName="name"
+        formControlName="fieldLabel"
         placeholder="name"
         class="rounded-lg border w-full px-3 py-2"
       />
       <span
         class="form-text text-red-600"
         error-msg
-        [valid]="!hasError('name')"
+        [valid]="!hasError('fieldLabel')"
       >
       </span>
     </div>
@@ -25,13 +25,16 @@
             <label for="fieldType" class="pl-2">Field Type </label>
             <div class="flex items-center group">
               <select
-                formControlName="type"
+                formControlName="fieldType"
                 class="rounded-lg border px-3 py-2 bg-white"
               >
                 <option value="number">number</option>
-                <option value="checkbox">checkbox</option>
                 <option value="date">date</option>
                 <option value="text">text</option>
+                <option value="email">email</option>
+                <option value="phone">phone</option>
+                <option value="currency">currency</option>
+                <option value="toggle">toggle</option>
               </select>
             </div>
           </div>
@@ -43,7 +46,7 @@
             <label for="fieldType" class="pl-2">Field Status </label>
             <div class="flex items-center group">
               <select
-                formControlName="status"
+                formControlName="fieldStatus"
                 class="rounded-lg border px-3 py-2 bg-white"
               >
                 <option value="required">required</option>

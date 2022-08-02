@@ -20,7 +20,7 @@
       >
         <div class="align-middle">{{ term.field_label }}</div>
         <div class="h-fit">
-          <mat-checkbox [(ngModel)]="term.status" class="z-0"></mat-checkbox>
+          <mat-checkbox (change)="setChecked(term,$event)" [(ngModel)]="term.field_status" class="z-0"></mat-checkbox>
         </div>
       </div>
     </div>

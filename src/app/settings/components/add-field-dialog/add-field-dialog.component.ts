@@ -11,9 +11,9 @@ import { SettingsService } from '../../services/settings.service';
 })
 export class AddFieldDialogComponent implements OnInit {
   form: FormGroup = this._fb.group({
-    name: ['', [Validators.required]],
-    type: ['text', Validators.required],
-    status: ['required', Validators.required]
+    fieldLabel: ['', [Validators.required]],
+    fieldType: ['text', Validators.required],
+    fieldStatus: ['required', Validators.required]
   });
   constructor(
     private _fb: FormBuilder,
@@ -24,9 +24,9 @@ export class AddFieldDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.form.reset({
-      name: '',
-      type: 'text',
-      status: 'required'
+      fieldLabel: '',
+      fieldType: 'text',
+      fieldStatus: 'required'
     })
   }
 
@@ -45,9 +45,9 @@ export class AddFieldDialogComponent implements OnInit {
       next: (resp) => {
         if (resp) {
           this.settingsService.createContractFields(
-            this.form.value.name,
-            this.form.value.status,
-            this.form.value.type,
+            this.form.value.fieldLabel,
+            this.form.value.fieldStatus,
+            this.form.value.fieldType,
           ).subscribe({
             next: (resp) => {
               this.dialogRef.close()

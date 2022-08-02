@@ -1,10 +1,7 @@
 export interface Term {
     field_label: string;
-    status: boolean;
-}
-
-export interface Field {
-    name: string;
-    type: string;
-    status: string;
+    field_code: string;
+    field_status: string;
+    field_type: string;
+    _id: string
 }
