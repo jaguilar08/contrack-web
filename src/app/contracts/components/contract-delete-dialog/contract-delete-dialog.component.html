@@ -1,1 +1,35 @@
-<p>contract-delete-dialog works!</p>
+<main class="w-full my-5 rounded-2xl bg-red-500">
+  <div class="flex flex-column justify-center font-medium text-center mb-3">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="3.5rem"
+      viewBox="0 0 24 24"
+      width="100%"
+      fill="#EE4266"
+      class="mb-3"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path
+        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+      />
+    </svg>
+    <p class="text-base">
+      Are you sure you want to <span class="text-red-400">Delete</span> this
+      signal?
+    </p>
+  </div>
+  <div class="flex justify-content-between">
+    <button
+      (click)="onCancel()"
+      class="button rounded-lg border-1 border-gray-400 bg-gray-100 text-gray-400 hover:bg-gray-200 active:bg-gray-300 text-base px-3 py-2"
+    >
+      Cancel
+    </button>
+    <button
+      (click)="onConfirm()"
+      class="button rounded-lg border-1 border-red-400 bg-red-100 text-red-400 hover:bg-red-200 active:bg-red-300 text-base px-3 py-2"
+    >
+      Delete
+    </button>
+  </div>
+</main>

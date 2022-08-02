@@ -4,9 +4,9 @@
     <col width="10%" />
     <col width="10%" />
     <col width="10%" />
+    <col width="15%" />
     <col width="10%" />
-    <col width="10%" />
-    <col width="10%" />
+    <col width="5%" />
     <col width="10%" />
     <col width="10%" />
     <col width="10%" />
@@ -26,15 +26,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="border">
-        <td class="p-3 text-center"></td>
-        <td class="text-center"></td>
-        <td class="text-center"></td>
-        <td class="flex justify-content-center my-2 text-center"></td>
+      <tr class="border p-2" *ngFor="let contract of contracts">
+        <td class="text-center">{{ contract.contractor_name }}</td>
+        <td class="text-center">{{ contract.contract_category }}</td>
+        <td class="text-center">{{ contract.periodicity }}</td>
+        <td class="text-center">{{ contract.contract_value | currency }}</td>
+        <td class="text-center">{{ contract.effective_date | toDate }}</td>
+        <td class="text-center">{{ contract.effective_date | toDate }}</td>
+        <td class="text-center">90</td>
+        <td class="text-center">{{ contract.responsible }}</td>
+        <td class="text-center">{{ contract.contract_status }}</td>
         <td class="text-center">
-          <mat-icon class="text-blue-400 mx-1">launch</mat-icon>
-          <mat-icon class="text-yellow-400 mx-1">edit</mat-icon>
-          <mat-icon class="text-red-400 mx-1">delete</mat-icon>
+          <button>
+            <mat-icon class="text-blue-400 mx-1" (click)="onDetails(contract)"
+              >launch</mat-icon
+            >
+          </button>
+          <button>
+            <mat-icon class="text-yellow-400 mx-1" (click)="onEdit(contract)"
+              >edit</mat-icon
+            ></button
+          ><button>
+            <mat-icon class="text-red-400 mx-1" (click)="onDelete(contract)"
+              >delete</mat-icon
+            >
+          </button>
         </td>
       </tr>
     </tbody>
