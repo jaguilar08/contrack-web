@@ -5,18 +5,17 @@ import { ContractsRoutingModule } from './contracts-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 
-import { ContractDetailsDialogComponent } from './components/contract-details-dialog/contract-details-dialog.component';
-import { ContractEditDialogComponent } from './components/contract-edit-dialog/contract-edit-dialog.component';
 import { ContractDeleteDialogComponent } from './components/contract-delete-dialog/contract-delete-dialog.component';
+import { ContractsConfigDialogComponent } from './components/contracts-config-dialog/contracts-config-dialog.component';
 
 
 
 @NgModule({
   declarations: [
 
-    ContractDetailsDialogComponent,
-    ContractEditDialogComponent,
-    ContractDeleteDialogComponent
+
+    ContractDeleteDialogComponent,
+      ContractsConfigDialogComponent
   ],
   imports: [
 
