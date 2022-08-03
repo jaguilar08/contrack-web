@@ -18,10 +18,11 @@ const routes: Routes = [
         path: 'settings',
         loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
       },
+      { path: 'contracts', loadChildren: () => import('./contracts/contracts.module').then(m => m.ContractsModule) },
       { path: '**', redirectTo: 'home' },
-      { path: 'contracts', component: ContractsComponent }
     ]
-  }
+  },
+
 ];
 
 @NgModule({
