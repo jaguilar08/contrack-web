@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import * as moment from 'moment';
 import { Contract_Overview } from '../../models/ContractOverview';
 import { ContractDeleteDialogComponent } from '../contract-delete-dialog/contract-delete-dialog.component';
+import { ContractsConfigDialogComponent } from '../contracts-config-dialog/contracts-config-dialog.component';
 
 @Component({
   selector: 'app-contracts-table',
@@ -74,6 +75,22 @@ export class ContractsTableComponent implements OnInit {
 
   }
 
+  onCreate() {
+    this.dialog.open(ContractsConfigDialogComponent, {
+      width: '630px',
+      data: {
+        title: "Create",
+      },
+      disableClose: false,
+    }).afterClosed().subscribe({
+      next: (contractData) => {
+        if (!contractData) return;
+        this.snackBar.open(`Creating contract`, 'X');
+        this.contracts.push(contractData);
+      }
+    })
+  }
+
 
   onDetails(contractData: Contract_Overview) {
 
@@ -86,7 +103,7 @@ export class ContractsTableComponent implements OnInit {
 
   onDelete(contractData: Contract_Overview) {
     this.dialog.open(ContractDeleteDialogComponent, {
-      hasBackdrop: false,
+      width: '250px',
       data: {
         title: 'Delete Contract',
       }, disableClose: false,
@@ -94,6 +111,13 @@ export class ContractsTableComponent implements OnInit {
       next: (wasConfirm) => {
         if (!wasConfirm) return;
         this.snackBar.open(`Removing contract`, 'X');
+        this.contracts = this.contracts.filter(
+          ({ _id }) => contractData._id != _id
+        );
+        this.snackBar.open(
+          `Contract successfully removed!`,
+          'X'
+        );
         // this._appService.removeCampaign(contractData).subscribe({
         //   next: () => { },
         //   complete: () => {
