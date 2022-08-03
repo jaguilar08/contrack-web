@@ -14,14 +14,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MaterialModule } from './material/material.module';
 import { VerticalChartsComponent } from './dashboard/components/charts/vertical-charts/vertical-charts.component';
 import { PieChartsComponent } from './dashboard/components/charts/pie-charts/pie-charts.component';
-import { SettingsComponent } from './settings/screens/settings/settings.component';
-import { TermsSetupCardComponent } from './settings/components/settingsCards/terms-setup-card/terms-setup-card.component';
-import { TermsSelectionCardComponent } from './settings/components/settingsCards/terms-selection-card/terms-selection-card.component';
 import { AuthGuard } from '@guards/base/auth.guard';
 import { AuthInterceptorService } from '@services/base/auth-interceptor.service';
 import { PermissionGuard } from '@guards/base/permission.guard';
 
-import { AddFieldDialogComponent } from './settings/components/add-field-dialog/add-field-dialog.component';
 import { SharedModule } from './shared/shared.module';
 
 import { ContractsTableComponent } from './contracts/components/contracts-table/contracts-table.component';
@@ -37,10 +33,6 @@ import { ContractsComponent } from './contracts/screens/contracts/contracts.comp
     DashboardAnnualComponent,
     VerticalChartsComponent,
     PieChartsComponent,
-    SettingsComponent,
-    TermsSetupCardComponent,
-    TermsSelectionCardComponent,
-    AddFieldDialogComponent,
     ContractsTableComponent,
     ContractsComponent
 

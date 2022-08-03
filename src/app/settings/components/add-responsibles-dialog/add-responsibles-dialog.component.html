@@ -1,0 +1,16 @@
+<section class="w-96 bg-white flex flex-col items-center rounded-3xl p-10">
+  <div class="w-fit">
+    <h2 class="text-4xl font-semibold mb-5">Add Field</h2>
+  </div>
+  <label>Field Name</label>
+  <input
+    #nameInput
+    type="text"
+    placeholder="name"
+    class="rounded-lg border w-full px-3 py-2"
+  />
+  <span class="form-text text-red-600" error-msg [valid]="true"></span>
+  <div class="py-10 w-1/2">
+    <button [disabled]="!isValid" (click)="addField()">Add</button>
+  </div>
+</section>

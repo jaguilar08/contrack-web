@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { MatDialog } from '@angular/material/dialog';
 import { Term } from 'src/app/settings/models/Term';
@@ -14,10 +15,15 @@ import { AddFieldDialogComponent } from '../../add-field-dialog/add-field-dialog
 export class TermsSelectionCardComponent implements OnInit {
   isLoading: boolean = false;
   terms: Term[] = [];
+  checklist = new FormArray([]);
+
+  form: FormGroup = this._fb.group({
+  })
 
   constructor(
     private settingsService: SettingsService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private _fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +40,7 @@ export class TermsSelectionCardComponent implements OnInit {
         },
         complete: () => {
           this.isLoading = false;
+          this.assignCheckboxValue();
         }
       })
   }
@@ -67,5 +74,15 @@ export class TermsSelectionCardComponent implements OnInit {
           next: (res) => { }
         })
     }
+  }
+
+  assignCheckboxValue() {
+    this.terms.forEach((term, index) => {
+      if (term.field_status === 'required') {
+        this.form.addControl(`${index}`, new FormControl(true));
+      } else {
+        this.form.addControl(`${index}`, new FormControl(false));
+      }
+    });
   }
 }
