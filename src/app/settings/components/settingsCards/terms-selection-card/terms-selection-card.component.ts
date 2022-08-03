@@ -38,15 +38,18 @@ export class TermsSelectionCardComponent implements OnInit {
       })
   }
 
-  onSave() {
-    console.log(this.terms);
-  }
-
   onAdd() {
     const dialogRef = this.dialog.open(AddFieldDialogComponent, {
       width: 'auto',
       height: 'auto',
       autoFocus: false
+    })
+    dialogRef.afterClosed().subscribe({
+      next: (resp) => {
+        if (resp) {
+          this.terms.push(resp)
+        }
+      }
     })
   }
 

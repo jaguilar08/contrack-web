@@ -50,7 +50,7 @@ export class AddFieldDialogComponent implements OnInit {
             this.form.value.fieldType,
           ).subscribe({
             next: (resp) => {
-              this.dialogRef.close()
+              this.dialogRef.close(resp)
             }
           })
         }
