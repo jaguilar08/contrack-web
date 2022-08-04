@@ -19,6 +19,7 @@ const routes: Routes = [
         loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
       },
       { path: 'contracts', loadChildren: () => import('./contracts/contracts.module').then(m => m.ContractsModule) },
+      { path: 'install', loadChildren: () => import('./install/install.module').then(m => m.InstallModule) },
       { path: '**', redirectTo: 'home' },
     ]
   },
