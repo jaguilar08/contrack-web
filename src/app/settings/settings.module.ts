@@ -11,6 +11,7 @@ import { SettingsComponent } from './screens/settings/settings.component';
 import { FieldsSelectionCardComponent } from './components/settingsCards/fields-selection-card/fields-selection-card.component';
 import { FieldsSetupCardComponent } from './components/settingsCards/fields-setup-card/fields-setup-card.component';
 import { FieldDeleteDialogComponent } from './components/field-delete-dialog/field-delete-dialog.component';
+import { ContractCategoryComponent } from './components/settingsCards/contract-category/contract-category.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FieldDeleteDialogComponent } from './components/field-delete-dialog/fie
     FieldsSetupCardComponent,
     FieldsSelectionCardComponent,
     SettingsComponent,
-    FieldDeleteDialogComponent
+    FieldDeleteDialogComponent,
+    ContractCategoryComponent
   ],
   imports: [
     CommonModule,
