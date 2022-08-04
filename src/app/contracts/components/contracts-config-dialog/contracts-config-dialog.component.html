@@ -1,18 +1,109 @@
-<Section class="w-full">
+<Section class="w-full pb-7">
   <div class="flex justify-between w-full">
-    <div class="text-3xl font-semibold">{{ data.title }}</div>
-    <div>
-      <div class="flex flex-col">
+    <div class="text-3xl font-semibold w-1/2">{{ data.title }}</div>
+    <div class="flex w-1/2">
+      <div class="flex flex-col w-1/2 mx-5">
         <label for="type">Type</label>
 
-        <select name="Tye" id="type">
+        <select
+          name="type"
+          class="border-gray-400 py-1 rounded-md border text-base text-gray-400"
+        >
+          <option value="">lslskddkdkdkd</option>
+        </select>
+      </div>
+      <div class="flex flex-col w-1/2">
+        <label for="Category">Category</label>
+
+        <select
+          name="category"
+          class="border-gray-400 rounded-md py-1 border text-gray-400"
+        >
           <option value=""></option>
         </select>
       </div>
     </div>
   </div>
-  <div></div>
 </Section>
-<Section></Section>
-<Section></Section>
+<Section class="w-full">
+  <div class="flex w-full pb-4">
+    <div class="w-1/2 flex flex-col">
+      <label for="">Contract Value</label
+      ><input type="text" class="px-2 border border-gray-400 rounded-md py-1" />
+    </div>
+    <div class="flex flex-col w-1/2 ml-5">
+      <label for="status">Status</label>
+      <select
+        name="status"
+        class="border-gray-400 rounded-md border py-1 text-gray-400"
+      >
+        <option value="">Active</option>
+      </select>
+    </div>
+  </div>
+  <div class="flex w-full pb-4">
+    <div class="w-1/2 flex flex-col">
+      <label for="">Contract Name</label
+      ><input type="text" class="px-2 border border-gray-400 rounded-md py-1" />
+    </div>
+    <div class="flex flex-col w-1/2 ml-5">
+      <label for="responsible">Responsible</label>
+      <select
+        name="responsible"
+        class="border-gray-400 rounded-md border py-1 text-gray-400"
+      >
+        <option value="">Jeff Aguilar</option>
+      </select>
+    </div>
+  </div>
+  <div class="flex w-full pb-4">
+    <div class="w-1/2 flex flex-col">
+      <label for="">Effective Date</label
+      ><input type="date" class="px-2 border border-gray-400 rounded-md py-1" />
+    </div>
+    <div class="flex flex-col w-1/2 ml-5">
+      <label for="periodicty">Periodicity</label>
+      <select
+        name="periodicity"
+        class="border-gray-400 rounded-md border py-1 text-gray-400"
+      >
+        <option value="">Anually</option>
+      </select>
+    </div>
+  </div>
+  <div class="flex w-full pb-4">
+    <div class="w-full flex flex-col">
+      <label for="">Due date</label
+      ><input type="date" class="px-2 border border-gray-400 rounded-md py-1" />
+    </div>
+  </div>
+</Section>
+<Section class="w-full">
+  <div class="flex flex-col w-1/4">
+    <button
+      class="flex justify-between w-full bg-indigo-500 rounded-lg text-white pt-2 b-1 px-3"
+    >
+      More fields
+      <span>
+        <mat-icon>expand_more</mat-icon>
+      </span>
+    </button>
+    <div class="border">
+      <div *ngFor="let field of fields" class="flex justify-between">
+        <div class="align-middle">{{ field.field_label }}</div>
+        <input
+          type="checkbox"
+          [value]="field.field_label"
+          class="text-indigo-500"
+        />
+        <div class="h-fit">
+          <mat-checkbox
+            (change)="setChecked(field, $event)"
+            class="z-0"
+          ></mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
 <Section></Section>

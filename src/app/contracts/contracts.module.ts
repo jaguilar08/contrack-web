@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ContractDeleteDialogComponent } from './components/contract-delete-dialog/contract-delete-dialog.component';
 import { ContractsConfigDialogComponent } from './components/contracts-config-dialog/contracts-config-dialog.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -15,13 +16,14 @@ import { ContractsConfigDialogComponent } from './components/contracts-config-di
 
 
     ContractDeleteDialogComponent,
-      ContractsConfigDialogComponent
+    ContractsConfigDialogComponent
   ],
   imports: [
 
     CommonModule,
     ContractsRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ]
 })
 export class ContractsModule { }

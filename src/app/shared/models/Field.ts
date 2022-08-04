@@ -1,6 +1,7 @@
 export interface Field {
-    label?: string;
-    code?: string;
-    status: string;
-    type: string;
+    _id?: string;
+    field_label?: string;
+    field_code?: string;
+    field_status: string;
+    field_type: string;
 }
