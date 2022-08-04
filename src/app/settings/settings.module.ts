@@ -8,17 +8,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SettingsRoutingModule } from './settings-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { SettingsComponent } from './screens/settings/settings.component';
-import { TermsSelectionCardComponent } from './components/settingsCards/terms-selection-card/terms-selection-card.component';
-import { TermsSetupCardComponent } from './components/settingsCards/terms-setup-card/terms-setup-card.component';
+import { FieldsSelectionCardComponent } from './components/settingsCards/fields-selection-card/fields-selection-card.component';
+import { FieldsSetupCardComponent } from './components/settingsCards/fields-setup-card/fields-setup-card.component';
+import { FieldDeleteDialogComponent } from './components/field-delete-dialog/field-delete-dialog.component';
 
 
 @NgModule({
   declarations: [
     AddResponsiblesDialogComponent,
     AddFieldDialogComponent,
-    TermsSetupCardComponent,
-    TermsSelectionCardComponent,
-    SettingsComponent
+    FieldsSetupCardComponent,
+    FieldsSelectionCardComponent,
+    SettingsComponent,
+    FieldDeleteDialogComponent
   ],
   imports: [
     CommonModule,

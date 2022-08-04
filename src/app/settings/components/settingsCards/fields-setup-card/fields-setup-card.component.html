@@ -7,12 +7,15 @@
       class="flex justify-between border px-2 pt-1 content-center"
       *ngFor="let responsible of responsibles"
     >
-      <div class="align-middle">{{ responsible }}</div>
+      <div class="align-middle">{{ responsible.name }}</div>
       <div class="h-fit">
         <a> <mat-icon class="text-amber-500">edit</mat-icon> </a
-        ><a>
-          <mat-icon class="text-red-500 ml-1">delete</mat-icon>
-        </a>
+        >
+        <button>
+          <mat-icon class="text-red-400 mx-1" (click)="onDelete(responsible)"
+            >delete</mat-icon
+          >
+        </button>
       </div>
     </div>
   </div>
