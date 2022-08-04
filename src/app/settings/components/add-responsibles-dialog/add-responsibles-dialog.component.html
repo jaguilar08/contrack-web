@@ -1,6 +1,8 @@
 <section class="w-96 bg-white flex flex-col items-center rounded-3xl p-10">
   <div class="w-fit">
-    <h2 class="text-4xl font-semibold mb-5">Add Responsible</h2>
+    <h2 class="text-4xl font-semibold mb-5">
+      {{ isNewResponsible ? "Add Member" : "Edit Responsible" }}
+    </h2>
   </div>
   <form [formGroup]="form">
     <label>Responsible Name</label>
@@ -20,9 +22,9 @@
           ? 'py-1 w-full border-2 text-base bg-indigo-500 rounded-md text-white'
           : 'py-1 w-full border-2 bg-indigo-400 text-base rounded-md text-white'
       "
-      (click)="addField()"
+      (click)="postField()"
     >
-      Add
+      {{ isNewResponsible ? "Add" : "Edit" }}
     </button>
   </div>
 </section>

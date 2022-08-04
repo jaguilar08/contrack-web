@@ -12,9 +12,8 @@ import { FieldDeleteDialogComponent } from '../../field-delete-dialog/field-dele
   styleUrls: ['./fields-setup-card.component.css']
 })
 export class FieldsSetupCardComponent implements OnInit {
-
-  responsibles: Responsible[] =
-    [{name: 'Jeff Aguilar', _id: '1'}, {name: 'Mario Chan', _id: '2'}, {name: 'Edgar Bezares', _id: '3'}, {name: 'Carlos Morales', _id: '4'}, {name: 'Carlos Medez', _id: '5'}]
+  isLoading: boolean = false;
+  responsibles: Responsible[] = [];
 
   constructor(
     private dialog: MatDialog,
@@ -23,18 +22,17 @@ export class FieldsSetupCardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getResponsibles();
   }
 
   onAdd() {
-    const dialogRef = this.dialog.open(AddResponsiblesDialogComponent,{
+    const dialogRef = this.dialog.open(AddResponsiblesDialogComponent, {
       width: 'auto',
       height: 'auto'
     })
     dialogRef.afterClosed().subscribe({
       next: (resp) => {
-        if (resp) {
-          this.responsibles.push(resp)
-        }
+        this.responsibles.push(resp)
       }
     })
   }
@@ -59,5 +57,27 @@ export class FieldsSetupCardComponent implements OnInit {
       },
     });
   }
-  
+
+  onEdit(responsible: Responsible) {
+    const dialogRef = this.dialog.open(AddResponsiblesDialogComponent, {
+      width: 'auto',
+      height: 'auto',
+      data: responsible
+    })
+    dialogRef.afterClosed().subscribe({
+      next: (resp) => {
+        if (resp) {
+          this.getResponsibles();
+        }
+      }
+    })
+  }
+
+  getResponsibles() {
+    this.isLoading = true;
+    this.settingsService.getResponsibles().subscribe({
+      next: (resp) => this.responsibles = resp,
+      complete: () => this.isLoading = false
+    })
+  }
 }

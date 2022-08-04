@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '@env/environment';
 import { Observable } from 'rxjs';
 import { Field } from '../models/Field';
+import { Responsible } from '../models/Responsible';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,14 @@ export class SettingsService {
   }
 
   createResponsibles( name: string ) {
-    return this.http.post<string>(`${this.url}responsibles/${name}`,{});
+    return this.http.post<Responsible>(`${this.url}responsibles/`,{name});
+  }
+
+  updateResponsible(_id: string, name: string ) {
+    return this.http.put<Responsible>(`${this.url}responsibles/${_id}`,{name});
+  }
+
+  getResponsibles() {
+    return this.http.get<Responsible[]>(`${this.url}responsibles/`);
   }
 }
