@@ -91,15 +91,11 @@
     <div class="border">
       <div *ngFor="let field of fields" class="flex justify-between">
         <div class="align-middle">{{ field.field_label }}</div>
-        <input
-          type="checkbox"
-          [value]="field.field_label"
-          class="text-indigo-500"
-        />
         <div class="h-fit">
           <mat-checkbox
             (change)="setChecked(field, $event)"
             class="z-0"
+            color="primary"
           ></mat-checkbox>
         </div>
       </div>
